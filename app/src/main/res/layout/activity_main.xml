@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    >
+    <Chronometer
+        android:id="@+id/chrono"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:format="예약에 걸린 시간 : %s"
+        android:gravity="center"
+        android:textSize="20sp"
+        />
+    <Button
+        android:id="@+id/btnStart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btnStart"
+        android:layout_margin="@dimen/maringMedium"
+        />
+
+    <RadioGroup
+        android:id="@+id/rg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:id="@+id/rbDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/radioDate"
+            android:layout_marginLeft="@dimen/maringSmall"/>
+        <RadioButton
+            android:id="@+id/rbTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/radioTime"
+            android:layout_marginLeft="@dimen/maringSmall"/>
+    </RadioGroup>
+
+    <FrameLayout
+        android:layout_margin="@dimen/maringMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <CalendarView
+            android:id="@+id/Calendar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:showWeekNumber="false"
+            android:layout_margin="@dimen/maringMedium"/>
+        <TimePicker
+            android:id="@+id/Timepick"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/maringMedium"
+            android:timePickerMode="spinner"/>
+
+    </FrameLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/maringMedium">
+        <Button
+            android:id="@+id/btnDone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btnDone">
+
+        </Button>
+        <TextView
+            android:id="@+id/textResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </TextView>
+    </LinearLayout>
+</LinearLayout>
